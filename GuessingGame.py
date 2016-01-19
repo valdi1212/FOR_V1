@@ -16,7 +16,7 @@ class GuessingGame:
             print("The correct number was " + str(correctNumber))
             break
         elif guessedNumber == correctNumber:
-            score = int(0 * (math.pow(2, 8 - guessCounter)))
+            score = int(10 * (math.pow(2, 8 - guessCounter)))
             print("Congratulations! You guessed the right number. Your score is " + str(score))
             break
         elif guessedNumber < correctNumber:
