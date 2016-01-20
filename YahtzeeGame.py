@@ -10,7 +10,7 @@ def check_score(player_score):
     print("Your current score is: " + str(player_score))
 
 
-def player_roll(player_dice):
+def roll(player_dice):
     """This function rolls the dice for the player
     :param player_dice: list of the player's dice
     """
@@ -24,9 +24,8 @@ def reroll(dice, player_dice):
     :param dice: string for the dice
     :param player_dice: values of player's dice
     """
-    dice_to_roll = []
-    # TODO Need to learn how to work with strings and extract the numbers of the dice to work with.
-    # TODO note: need to return error if string is unusable and have user input it again!
+    for item in dice:
+        player_dice[item - 1] = random.randint(1, 6)
 
 
 class Yahtzee:
@@ -42,4 +41,11 @@ class Yahtzee:
 
     print("Testing player_roll function:")
 
-    player_roll(playerDice)
+    roll(playerDice)
+
+    rerollString = raw_input("Reroll your dice: ")
+    rerollList = rerollString.split(',')
+    rerollList = [int(i) for i in rerollList]
+    reroll(rerollList, playerDice)
+    print(playerDice)
+
