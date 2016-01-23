@@ -7,7 +7,7 @@ guessCounter = 0
 correctNumber = random.randint(1, 100)
 
 while True:
-    guessedNumber = int(input("Please guess a number between 1 and 100: "))
+    guessedNumber = int(raw_input("Please guess a number between 1 and 100: "))
     guessCounter += 1
     if guessCounter == 8:
         print("Sorry, you ran out of tries")

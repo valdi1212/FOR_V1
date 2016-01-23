@@ -37,7 +37,7 @@ cardValues = {
 def keep_playing():
     print("Do you wish to play another round?(y/n)")
     while True:
-        choice = input()
+        choice = raw_input()
         if choice == 'y':
             super.keepPlaying = True
             break
@@ -67,7 +67,7 @@ def add_total(card_list, total, is_player):
     else:
         print("You have been dealt an ace.\nDo you wish to count its value as 11(y/n)")
         while True:
-            choice = input()
+            choice = raw_input()
             if choice == 'y':
                 total += 11
                 break
@@ -101,7 +101,7 @@ def show_menu():
     print("\nType 'hit' to receive another card.")
     print("Type 'stand' to stop recieving cards.\n")
     while True:
-        choice = input()
+        choice = raw_input()
         if choice == 'hit':
             deal_cards(playerCards)
             add_total(playerCards, playerTotal, True)
@@ -124,7 +124,7 @@ while keepPlaying:
     bet = 0
     show_points()
     while bet == 0:
-        bet = int(input("How much do you want to bet?"))
+        bet = int(raw_input("How much do you want to bet?"))
         if bet > points:
             print("You can't bet more than you have.")
             bet = 0

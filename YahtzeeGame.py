@@ -31,7 +31,7 @@ print("Testing player_roll function:")
 
 roll(playerDice)
 
-rerollString = input("Reroll your dice: ")
+rerollString = raw_input("Reroll your dice: ")
 rerollList = rerollString.split(',')
 rerollList = [int(i) for i in rerollList]
 reroll(rerollList, playerDice)
