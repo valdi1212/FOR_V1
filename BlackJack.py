@@ -36,6 +36,7 @@ cardValues = {
     'K': 10
 }
 
+
 # Shows the player's points
 def show_points():
     print("Your points: " + str(points))

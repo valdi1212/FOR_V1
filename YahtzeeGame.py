@@ -19,13 +19,6 @@ def reroll(dice, player_dice):
 
 playerScore = 0
 playerDice = [None] * 5
-print("Welcome to yahtzee.")
-print("To see your score in between rounds, simply type 'score'")
-print("To reroll your dice type 'reroll'")
-print("To pick which dice you wish to reroll, and which to keep, type their numbers in a row.")
-print("E.g. '1,3,4' This would keep dice number 2 and 5, but reroll dice number 1, 3 and 4")
-print("If you wish to reroll all your dice type '0'")
-print("Starting game now.\n")
 
 print("Testing player_roll function:")
 
